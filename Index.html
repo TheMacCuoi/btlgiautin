@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+<head>
+    <meta charset='UTF-8'>
+    <title>Hello Mr Chợ</title>
+    <style>
+        body {
+            background-color: rgba(227, 215, 227, 0.89);
+            margin: 200px 40%;
+        }
+
+        form {
+            width: 350px;
+            height: 44px;
+            border: 1px solid black;
+            border-radius: 10px;
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+        }
+
+        input {
+            all: unset;
+            font: 16px system-ui;
+            height: 100%;
+            width: 100%;
+            padding: 6px 10px;
+        }
+
+        ::placeholder {
+            opacity: 0.7;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+        }
+
+        button {
+            all: unset;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="tor2web">
+        <div id="header">
+            <h1><a href="https://www.tor2web.org"><img src="/img/tor2web.png" alt="tor2web logo"></a></h1>
+        </div>
+        <div id="tor2web-content">
+            <form role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Ex: https://pornhub.onion" aria-label="Search through site content">
+                <button>
+                    <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+            </form>
+        </div>
+    </div>
+<script>
+    const f = document.getElementById('form');
+    const q = document.getElementById('query');
+
+    function submitted(event) {
+        event.preventDefault();
+        let url = q.value;
+        url = url.replace(".onion", ".kronini.xyz");
+        url = url.replace("http://", "https://");
+        const win = window.open(url, '_blank');
+        win.focus();
+    }
+
+    f.addEventListener('submit', submitted);
+</script>
+</body>
+</html>
