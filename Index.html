@@ -3,14 +3,13 @@
 <head>
     <meta charset='UTF-8'>
     <title>Hello Mr Chợ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
-        body {
-            background-color: rgba(227, 215, 227, 0.89);
-            margin: 200px 40%;
+        body{
+            background-color: #c8cce0;
         }
-
         form {
-            width: 350px;
+            width: 400px;
             height: 44px;
             border: 1px solid black;
             border-radius: 10px;
@@ -40,24 +39,45 @@
         button {
             all: unset;
             cursor: pointer;
-            width: 44px;
+            width: 60px;
             height: 44px;
+        }
+
+        h1{
+            font-family: Centaur;
         }
 
     </style>
 </head>
 <body>
-    <div id="tor2web">
-        <div id="header">
-            <h1><a href="https://www.tor2web.org"><img src="/img/tor2web.png" alt="tor2web logo"></a></h1>
-        </div>
-        <div id="tor2web-content">
-            <form role="search" id="form">
-                <input type="search" id="query" name="q" placeholder="Ex: https://pornhub.onion" aria-label="Search through site content">
-                <button>
-                    <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
-                </button>
-            </form>
+    <div style="margin: 200px">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                </div>
+                <div class="col-4"><h1><strong>kronini.xyz</strong></h1></div>
+                <div class="col-4">
+                </div>
+                <div class="col-3">
+                </div>
+                <div class="col-9">
+                    <form role="search" id="form">
+                        <input type="search" id="query" name="q" placeholder="Ex: https://pornhub.onion" aria-label="Search through site content">
+                        <button>Go to</button>
+                    </form>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-8" style="margin: 50px">
+                    <h2>Demo môn học Kỹ thuật giấu tin.</h2>
+                    <p>- Trang web này sẽ đưa bạn tới trang web <code>.onion</code> mà không cần dùng Tor Browser.</p>
+                    <p>- Một số hạn chế:</p>
+                    <ol>
+                        <li><p>Hình <strong>ảnh/video</strong> có thể không load được</p></li>
+                        <li><p>Không vào được trang web có <code>www.</code></p></li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 <script>
